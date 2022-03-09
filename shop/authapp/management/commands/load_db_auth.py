@@ -13,6 +13,6 @@ class Command(BaseCommand):
 
         for item in data_for_resore:
             Profile.objects.create(**{
-                'login': item.login,
-                'password': item.password,
+                'login': item['login'],
+                'password': item['password'],
             })
